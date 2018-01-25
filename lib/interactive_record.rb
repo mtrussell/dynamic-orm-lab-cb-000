@@ -58,7 +58,7 @@ class InteractiveRecord
 
     value = attr_hash.values[0]
 
-    puts value
+    value.to_i
 
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{value}'"
 
