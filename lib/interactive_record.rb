@@ -60,6 +60,8 @@ class InteractiveRecord
 
     value.to_i
 
+    puts value
+
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{value}'"
 
     DB[:conn].execute(sql)
