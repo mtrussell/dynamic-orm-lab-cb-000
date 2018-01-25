@@ -57,12 +57,11 @@ class InteractiveRecord
   def self.find_by(attr_hash)
 
     value = attr_hash.values[0]
+    key = attr_hash.keys[0]
 
     value.to_i
 
-    puts value
-
-    sql = "SELECT * FROM #{self.table_name} WHERE name = '#{value}'"
+    sql = "SELECT * FROM #{self.table_name} WHERE '#{key}' = '#{value}'"
 
     DB[:conn].execute(sql)
   end
