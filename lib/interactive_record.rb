@@ -60,9 +60,6 @@ class InteractiveRecord
     key = attr_hash.keys[0]
 
     value.to_i
-    puts key
-    puts value
-
 
     sql = "SELECT * FROM #{self.table_name} WHERE #{key} = '#{value}'"
 
